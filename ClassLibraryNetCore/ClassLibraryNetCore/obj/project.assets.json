@@ -5170,19 +5170,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ichim\\.nuget\\packages\\": {}
+    "C:\\Users\\Andrei\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ichim\\Desktop\\TSP.NET\\ClassLibraryNetCore\\ClassLibraryNetCore\\ClassLibraryNetCore.csproj",
+      "projectUniqueName": "C:\\Users\\Andrei\\Desktop\\GIT dotnet\\ClassLibraryNetCore\\ClassLibraryNetCore\\ClassLibraryNetCore.csproj",
       "projectName": "ClassLibraryNetCore",
-      "projectPath": "C:\\Users\\ichim\\Desktop\\TSP.NET\\ClassLibraryNetCore\\ClassLibraryNetCore\\ClassLibraryNetCore.csproj",
-      "packagesPath": "C:\\Users\\ichim\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ichim\\Desktop\\TSP.NET\\ClassLibraryNetCore\\ClassLibraryNetCore\\obj\\",
+      "projectPath": "C:\\Users\\Andrei\\Desktop\\GIT dotnet\\ClassLibraryNetCore\\ClassLibraryNetCore\\ClassLibraryNetCore.csproj",
+      "packagesPath": "C:\\Users\\Andrei\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Andrei\\Desktop\\GIT dotnet\\ClassLibraryNetCore\\ClassLibraryNetCore\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ichim\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Andrei\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

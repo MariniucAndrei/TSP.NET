@@ -3,3 +3,6 @@ C:\Users\ichim\Desktop\TSP.NET\ClassLibraryNetCore\ClassLibraryNetCore\bin\Debug
 C:\Users\ichim\Desktop\TSP.NET\ClassLibraryNetCore\ClassLibraryNetCore\obj\Debug\netcoreapp3.1\ClassLibraryNetCore.csprojAssemblyReference.cache
 C:\Users\ichim\Desktop\TSP.NET\ClassLibraryNetCore\ClassLibraryNetCore\obj\Debug\netcoreapp3.1\ClassLibraryNetCore.AssemblyInfoInputs.cache
 C:\Users\ichim\Desktop\TSP.NET\ClassLibraryNetCore\ClassLibraryNetCore\obj\Debug\netcoreapp3.1\ClassLibraryNetCore.AssemblyInfo.cs
+C:\Users\Andrei\Desktop\GIT dotnet\ClassLibraryNetCore\ClassLibraryNetCore\obj\Debug\netcoreapp3.1\ClassLibraryNetCore.csprojAssemblyReference.cache
+C:\Users\Andrei\Desktop\GIT dotnet\ClassLibraryNetCore\ClassLibraryNetCore\obj\Debug\netcoreapp3.1\ClassLibraryNetCore.AssemblyInfoInputs.cache
+C:\Users\Andrei\Desktop\GIT dotnet\ClassLibraryNetCore\ClassLibraryNetCore\obj\Debug\netcoreapp3.1\ClassLibraryNetCore.AssemblyInfo.cs
