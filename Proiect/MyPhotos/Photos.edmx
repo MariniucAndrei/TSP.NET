@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="Photos.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="PhotosStoreContainer">
+    <EntitySet Name="Zones" EntityType="Photos.Store.Zones" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Medias" EntityType="Photos.Store.Medias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PeopleGroups" EntityType="Photos.Store.PeopleGroups" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events" EntityType="Photos.Store.Events" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ZonesMedias" Association="Photos.Store.ZonesMedias">
+      <End Role="Zones" EntitySet="Zones" />
+      <End Role="Medias" EntitySet="Medias" />
+    </AssociationSet>
+    <AssociationSet Name="PeopleGroupsMedias" Association="Photos.Store.PeopleGroupsMedias">
+      <End Role="PeopleGroups" EntitySet="PeopleGroups" />
+      <End Role="Medias" EntitySet="Medias" />
+    </AssociationSet>
+    <AssociationSet Name="EventsMedias" Association="Photos.Store.EventsMedias">
+      <End Role="Events" EntitySet="Events" />
+      <End Role="Medias" EntitySet="Medias" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Zones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdMedia" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LocationName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Medias">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NamePhoto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Path" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsDeleted" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ZonesId" Type="int" Nullable="false" />
+    <Property Name="PeopleGroupsId" Type="int" Nullable="false" />
+    <Property Name="EventsId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PeopleGroups">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdMedia" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PeopleName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdMedia" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EventName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="ZonesMedias">
+    <End Role="Zones" Type="Photos.Store.Zones" Multiplicity="1" />
+    <End Role="Medias" Type="Photos.Store.Medias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zones">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Medias">
+        <PropertyRef Name="ZonesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PeopleGroupsMedias">
+    <End Role="PeopleGroups" Type="Photos.Store.PeopleGroups" Multiplicity="1" />
+    <End Role="Medias" Type="Photos.Store.Medias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PeopleGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Medias">
+        <PropertyRef Name="PeopleGroupsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EventsMedias">
+    <End Role="Events" Type="Photos.Store.Events" Multiplicity="1" />
+    <End Role="Medias" Type="Photos.Store.Medias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Events">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Medias">
+        <PropertyRef Name="EventsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema xmlns="http://schemas.microsoft.com/ado/2009/11/edm" xmlns:cg="http://schemas.microsoft.com/ado/2006/04/codegeneration" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="Photos" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" annotation:UseStrongSpatialTypes="false">
+        <EntityContainer Name="PhotosContainer" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Zones" EntityType="Photos.Zones" />
+          <EntitySet Name="Medias" EntityType="Photos.Medias" />
+          <EntitySet Name="PeopleGroups" EntityType="Photos.PeopleGroups" />
+          <EntitySet Name="Events" EntityType="Photos.Events" />
+          <AssociationSet Name="ZonesMedias" Association="Photos.ZonesMedias">
+            <End Role="Zones" EntitySet="Zones" />
+            <End Role="Medias" EntitySet="Medias" />
+          </AssociationSet>
+          <AssociationSet Name="PeopleGroupsMedias" Association="Photos.PeopleGroupsMedias">
+            <End Role="PeopleGroups" EntitySet="PeopleGroups" />
+            <End Role="Medias" EntitySet="Medias" />
+          </AssociationSet>
+          <AssociationSet Name="EventsMedias" Association="Photos.EventsMedias">
+            <End Role="Events" EntitySet="Events" />
+            <End Role="Medias" EntitySet="Medias" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="Zones">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdMedia" Type="String" Nullable="false" />
+          <Property Name="LocationName" Type="String" Nullable="false" />
+          <NavigationProperty Name="Medias" Relationship="Photos.ZonesMedias" FromRole="Zones" ToRole="Medias" />
+        </EntityType>
+        <EntityType Name="Medias">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="NamePhoto" Type="String" Nullable="false" />
+          <Property Name="Date" Type="String" Nullable="false" />
+          <Property Name="Path" Type="String" Nullable="false" />
+          <Property Name="IsDeleted" Type="String" Nullable="false" />
+          <NavigationProperty Name="Zone" Relationship="Photos.ZonesMedias" FromRole="Medias" ToRole="Zones" />
+          <Property Name="ZonesId" Nullable="false" Type="Int32" />
+          <NavigationProperty Name="PeopleGroup" Relationship="Photos.PeopleGroupsMedias" FromRole="Medias" ToRole="PeopleGroups" />
+          <Property Name="PeopleGroupsId" Nullable="false" Type="Int32" />
+          <NavigationProperty Name="Event" Relationship="Photos.EventsMedias" FromRole="Medias" ToRole="Events" />
+          <Property Name="EventsId" Nullable="false" Type="Int32" />
+        </EntityType>
+        <EntityType Name="PeopleGroups">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdMedia" Type="String" Nullable="false" />
+          <Property Name="PeopleName" Type="String" Nullable="false" />
+          <NavigationProperty Name="Medias" Relationship="Photos.PeopleGroupsMedias" FromRole="PeopleGroups" ToRole="Medias" />
+        </EntityType>
+        <EntityType Name="Events">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IdMedia" Type="String" Nullable="false" />
+          <Property Name="EventName" Type="String" Nullable="false" />
+          <NavigationProperty Name="Medias" Relationship="Photos.EventsMedias" FromRole="Events" ToRole="Medias" />
+        </EntityType>
+        <Association Name="ZonesMedias">
+          <End Type="Photos.Zones" Role="Zones" Multiplicity="1" />
+          <End Type="Photos.Medias" Role="Medias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Zones">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Medias">
+              <PropertyRef Name="ZonesId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="PeopleGroupsMedias">
+          <End Type="Photos.PeopleGroups" Role="PeopleGroups" Multiplicity="1" />
+          <End Type="Photos.Medias" Role="Medias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="PeopleGroups">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Medias">
+              <PropertyRef Name="PeopleGroupsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="EventsMedias">
+          <End Type="Photos.Events" Role="Events" Multiplicity="1" />
+          <End Type="Photos.Medias" Role="Medias" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Events">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="Medias">
+              <PropertyRef Name="EventsId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+    <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PhotosStoreContainer" CdmEntityContainer="PhotosContainer">
+    <EntitySetMapping Name="Zones">
+      <EntityTypeMapping TypeName="IsTypeOf(Photos.Zones)">
+        <MappingFragment StoreEntitySet="Zones">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdMedia" ColumnName="IdMedia" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medias">
+      <EntityTypeMapping TypeName="IsTypeOf(Photos.Medias)">
+        <MappingFragment StoreEntitySet="Medias">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NamePhoto" ColumnName="NamePhoto" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ZonesId" ColumnName="ZonesId" />
+          <ScalarProperty Name="PeopleGroupsId" ColumnName="PeopleGroupsId" />
+          <ScalarProperty Name="EventsId" ColumnName="EventsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PeopleGroups">
+      <EntityTypeMapping TypeName="IsTypeOf(Photos.PeopleGroups)">
+        <MappingFragment StoreEntitySet="PeopleGroups">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdMedia" ColumnName="IdMedia" />
+          <ScalarProperty Name="PeopleName" ColumnName="PeopleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="IsTypeOf(Photos.Events)">
+        <MappingFragment StoreEntitySet="Events">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdMedia" ColumnName="IdMedia" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping></edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <edmx:Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </edmx:Connection>
+    <edmx:Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+        <DesignerProperty Name="UseLegacyProvider" Value="False" />
+      </DesignerInfoPropertySet>
+    </edmx:Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

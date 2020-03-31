@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Photos.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="PhotosStoreContainer">
+    <EntitySet Name="Zones" EntityType="Photos.Store.Zones" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Medias" EntityType="Photos.Store.Medias" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="PeopleGroups" EntityType="Photos.Store.PeopleGroups" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Events" EntityType="Photos.Store.Events" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="ZonesMedias" Association="Photos.Store.ZonesMedias">
+      <End Role="Zones" EntitySet="Zones" />
+      <End Role="Medias" EntitySet="Medias" />
+    </AssociationSet>
+    <AssociationSet Name="PeopleGroupsMedias" Association="Photos.Store.PeopleGroupsMedias">
+      <End Role="PeopleGroups" EntitySet="PeopleGroups" />
+      <End Role="Medias" EntitySet="Medias" />
+    </AssociationSet>
+    <AssociationSet Name="EventsMedias" Association="Photos.Store.EventsMedias">
+      <End Role="Events" EntitySet="Events" />
+      <End Role="Medias" EntitySet="Medias" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Zones">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdMedia" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="LocationName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Medias">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NamePhoto" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Date" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Path" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="IsDeleted" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ZonesId" Type="int" Nullable="false" />
+    <Property Name="PeopleGroupsId" Type="int" Nullable="false" />
+    <Property Name="EventsId" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="PeopleGroups">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdMedia" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="PeopleName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Events">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdMedia" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EventName" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="ZonesMedias">
+    <End Role="Zones" Type="Photos.Store.Zones" Multiplicity="1" />
+    <End Role="Medias" Type="Photos.Store.Medias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Zones">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Medias">
+        <PropertyRef Name="ZonesId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="PeopleGroupsMedias">
+    <End Role="PeopleGroups" Type="Photos.Store.PeopleGroups" Multiplicity="1" />
+    <End Role="Medias" Type="Photos.Store.Medias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PeopleGroups">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Medias">
+        <PropertyRef Name="PeopleGroupsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EventsMedias">
+    <End Role="Events" Type="Photos.Store.Events" Multiplicity="1" />
+    <End Role="Medias" Type="Photos.Store.Medias" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Events">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Medias">
+        <PropertyRef Name="EventsId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

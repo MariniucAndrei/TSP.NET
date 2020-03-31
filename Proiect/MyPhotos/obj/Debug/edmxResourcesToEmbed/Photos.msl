@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="PhotosStoreContainer" CdmEntityContainer="PhotosContainer">
+    <EntitySetMapping Name="Zones">
+      <EntityTypeMapping TypeName="IsTypeOf(Photos.Zones)">
+        <MappingFragment StoreEntitySet="Zones">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdMedia" ColumnName="IdMedia" />
+          <ScalarProperty Name="LocationName" ColumnName="LocationName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Medias">
+      <EntityTypeMapping TypeName="IsTypeOf(Photos.Medias)">
+        <MappingFragment StoreEntitySet="Medias">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="NamePhoto" ColumnName="NamePhoto" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+          <ScalarProperty Name="ZonesId" ColumnName="ZonesId" />
+          <ScalarProperty Name="PeopleGroupsId" ColumnName="PeopleGroupsId" />
+          <ScalarProperty Name="EventsId" ColumnName="EventsId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PeopleGroups">
+      <EntityTypeMapping TypeName="IsTypeOf(Photos.PeopleGroups)">
+        <MappingFragment StoreEntitySet="PeopleGroups">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdMedia" ColumnName="IdMedia" />
+          <ScalarProperty Name="PeopleName" ColumnName="PeopleName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Events">
+      <EntityTypeMapping TypeName="IsTypeOf(Photos.Events)">
+        <MappingFragment StoreEntitySet="Events">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="IdMedia" ColumnName="IdMedia" />
+          <ScalarProperty Name="EventName" ColumnName="EventName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
