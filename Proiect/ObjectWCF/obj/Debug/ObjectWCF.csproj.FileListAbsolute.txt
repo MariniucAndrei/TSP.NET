@@ -1,0 +1,13 @@
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\ObjectWCF\bin\Debug\ObjectWCF.dll
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\ObjectWCF\bin\Debug\ObjectWCF.pdb
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\ObjectWCF\bin\Debug\MyPhotoWCF.dll
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\ObjectWCF\bin\Debug\MyPhotos.dll
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\ObjectWCF\bin\Debug\EntityFramework.dll
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\ObjectWCF\bin\Debug\MyPhotoWCF.pdb
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\ObjectWCF\bin\Debug\MyPhotos.pdb
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\ObjectWCF\bin\Debug\MyPhotos.dll.config
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\ObjectWCF\bin\Debug\EntityFramework.xml
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\ObjectWCF\obj\Debug\ObjectWCF.csprojAssemblyReference.cache
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\ObjectWCF\obj\Debug\ObjectWCF.csproj.CopyComplete
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\ObjectWCF\obj\Debug\ObjectWCF.dll
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\ObjectWCF\obj\Debug\ObjectWCF.pdb

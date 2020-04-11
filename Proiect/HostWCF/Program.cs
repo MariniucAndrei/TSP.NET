@@ -1,8 +1,8 @@
 ﻿using System;
 using System.ServiceModel;
-using ObjectWCF;
 using System.ServiceModel.Description;
 using MyPhotoWCF;
+
 namespace HostWCF
 {
     class Program
@@ -10,9 +10,13 @@ namespace HostWCF
         static void Main(string[] args)
         {
             Console.WriteLine("Lansare server WCF...");
-            ServiceHost host = new ServiceHost(typeof(MyPhotoWCF.Class1), new Uri("http://localhost:8000/PC%22"));
+            ServiceHost host = new ServiceHost(typeof(API), new Uri("http://localhost:8000/PC"));
             foreach (ServiceEndpoint se in host.Description.Endpoints)
-                Console.WriteLine("A (address): {0} \nB (binding): {1}\nC(Contract): { 2}\n", se.Address, se.Binding.Name, se.Contract.Name);
+            {
+                Console.WriteLine("address: " + se.Address);
+                Console.WriteLine("binding: " + se.Binding.Name);
+                Console.WriteLine("Contract: " + se.Contract.Name);
+            }
             host.Open();
             Console.WriteLine("Server in executie. Se asteapta conexiuni...");
             Console.WriteLine("Apasati Enter pentru a opri serverul!");

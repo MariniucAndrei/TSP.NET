@@ -11,20 +11,33 @@ namespace MyPhotos
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Runtime.Serialization;
+
+    [DataContract(IsReference = true)]
     public partial class Medias
     {
+        [DataMember]
         public int Id { get; set; }
+        [DataMember]
         public string NamePhoto { get; set; }
+        [DataMember]
         public string Date { get; set; }
+        [DataMember]
         public string Path { get; set; }
+        [DataMember]
         public string IsDeleted { get; set; }
+        [DataMember]
         public int ZonesId { get; set; }
+        [DataMember]
         public int PeopleGroupsId { get; set; }
+        [DataMember]
         public int EventsId { get; set; }
-    
+       
+        [DataMember]
         public virtual Zones Zone { get; set; }
+        [DataMember]
         public virtual PeopleGroups PeopleGroup { get; set; }
+        [DataMember]
         public virtual Events Event { get; set; }
     }
 }

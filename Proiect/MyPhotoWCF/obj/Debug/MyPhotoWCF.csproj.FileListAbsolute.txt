@@ -1,0 +1,11 @@
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\MyPhotoWCF\bin\Debug\MyPhotoWCF.dll
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\MyPhotoWCF\bin\Debug\MyPhotoWCF.pdb
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\MyPhotoWCF\bin\Debug\MyPhotos.dll
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\MyPhotoWCF\bin\Debug\EntityFramework.dll
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\MyPhotoWCF\bin\Debug\MyPhotos.pdb
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\MyPhotoWCF\bin\Debug\MyPhotos.dll.config
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\MyPhotoWCF\bin\Debug\EntityFramework.xml
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\MyPhotoWCF\obj\Debug\MyPhotoWCF.csprojAssemblyReference.cache
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\MyPhotoWCF\obj\Debug\MyPhotoWCF.csproj.CopyComplete
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\MyPhotoWCF\obj\Debug\MyPhotoWCF.dll
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\MyPhotoWCF\obj\Debug\MyPhotoWCF.pdb

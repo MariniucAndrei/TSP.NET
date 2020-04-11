@@ -1,0 +1,16 @@
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\bin\Debug\HostWCF.exe.config
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\bin\Debug\HostWCF.exe
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\bin\Debug\HostWCF.pdb
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\bin\Debug\MyPhotoWCF.dll
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\bin\Debug\ObjectWCF.dll
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\bin\Debug\MyPhotos.dll
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\bin\Debug\EntityFramework.dll
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\bin\Debug\MyPhotoWCF.pdb
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\bin\Debug\ObjectWCF.pdb
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\bin\Debug\MyPhotos.pdb
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\bin\Debug\MyPhotos.dll.config
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\bin\Debug\EntityFramework.xml
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\obj\Debug\HostWCF.csprojAssemblyReference.cache
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\obj\Debug\HostWCF.csproj.CopyComplete
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\obj\Debug\HostWCF.exe
+C:\Users\Andrei\Desktop\Facultate\TSP.NET\New folder\HostWCF\obj\Debug\HostWCF.pdb
