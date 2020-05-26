@@ -53,7 +53,7 @@ namespace MyPhotos
                 }
             }
         }
-        public string Read(string table)
+        public IList<string> Read(string table)
         {
             using (var db = new PhotosContainer())
             {
@@ -67,7 +67,8 @@ namespace MyPhotos
 
                     foreach (var item in query)
                     {
-                        return item.Path;
+
+                        return new List<string>();
                     }
                 }
                 if (table.Equals("Events"))
@@ -80,7 +81,7 @@ namespace MyPhotos
 
                     foreach (var item in query)
                     {
-                        return item.EventName;
+                        return new List<string>();
                     }
                 }
                 if (table.Equals("PeopleGroups"))
@@ -93,7 +94,7 @@ namespace MyPhotos
 
                     foreach (var item in query)
                     {
-                        return item.PeopleName;
+                        return new List<string>();
                     }
                 }
                 if (table.Equals("Zones"))
@@ -106,11 +107,11 @@ namespace MyPhotos
 
                     foreach (var item in query)
                     {
-                        return item.LocationName;
+                        return new List<string>();
                     }
                 }
             }
-            return "Error";
+            return new List<string>();
         }
         public void Update(string name, string NewName)
         {

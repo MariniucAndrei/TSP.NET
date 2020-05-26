@@ -19,3 +19,4 @@ C:\Users\Andrei\Desktop\GIT dotnet\Proiect\MyPhotos\bin\Debug\EntityFramework.Sq
 C:\Users\Andrei\Desktop\GIT dotnet\Proiect\MyPhotos\obj\Debug\MyPhotos.csproj.CopyComplete
 C:\Users\Andrei\Desktop\GIT dotnet\Proiect\MyPhotos\obj\Debug\MyPhotos.dll
 C:\Users\Andrei\Desktop\GIT dotnet\Proiect\MyPhotos\obj\Debug\MyPhotos.pdb
+C:\Users\Andrei\Desktop\GIT dotnet\Proiect\MyPhotos\obj\Debug\MyPhotos.csprojAssemblyReference.cache

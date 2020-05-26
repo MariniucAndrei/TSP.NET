@@ -10,7 +10,7 @@ namespace HostWCF
         static void Main(string[] args)
         {
             Console.WriteLine("Lansare server WCF...");
-            ServiceHost host = new ServiceHost(typeof(API), new Uri("http://localhost:8080/PC"));
+            ServiceHost host = new ServiceHost(typeof(API), new Uri("http://localhost:8000/PC"));
             foreach (ServiceEndpoint se in host.Description.Endpoints)
             {
                 Console.WriteLine("address: " + se.Address);

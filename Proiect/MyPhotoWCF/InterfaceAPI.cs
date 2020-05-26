@@ -18,7 +18,7 @@ namespace MyPhotoWCF
         void CreateNew(string table, string name, string id);
 
         [OperationContract]
-        string Read(string table);
+        IList<string> Read(string table);
 
         [OperationContract]
         void Update(string name, string NewName);

@@ -1,0 +1,65 @@
+﻿@page
+@model App.EditModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h1>Edit</h1>
+
+<h4>Medias</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Medias.Id" />
+            <div class="form-group">
+                <label asp-for="Medias.ZoneId" class="control-label"></label>
+                <input asp-for="Medias.ZoneId" class="form-control" />
+                <span asp-validation-for="Medias.ZoneId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medias.PeopleGroupsId" class="control-label"></label>
+                <input asp-for="Medias.PeopleGroupsId" class="form-control" />
+                <span asp-validation-for="Medias.PeopleGroupsId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medias.EventsId" class="control-label"></label>
+                <input asp-for="Medias.EventsId" class="form-control" />
+                <span asp-validation-for="Medias.EventsId" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medias.NamePhoto" class="control-label"></label>
+                <input asp-for="Medias.NamePhoto" class="form-control" />
+                <span asp-validation-for="Medias.NamePhoto" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medias.Date" class="control-label"></label>
+                <input asp-for="Medias.Date" class="form-control" />
+                <span asp-validation-for="Medias.Date" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medias.Path" class="control-label"></label>
+                <input asp-for="Medias.Path" class="form-control" />
+                <span asp-validation-for="Medias.Path" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Medias.isDeleted" class="control-label"></label>
+                <input asp-for="Medias.isDeleted" class="form-control" />
+                <span asp-validation-for="Medias.isDeleted" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="./Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -20,3 +20,6 @@ C:\Users\Andrei\Desktop\GIT dotnet\Proiect\MyPhotoWCF\obj\Debug\MyPhotoWCF.cspro
 C:\Users\Andrei\Desktop\GIT dotnet\Proiect\MyPhotoWCF\obj\Debug\MyPhotoWCF.csproj.CopyComplete
 C:\Users\Andrei\Desktop\GIT dotnet\Proiect\MyPhotoWCF\obj\Debug\MyPhotoWCF.dll
 C:\Users\Andrei\Desktop\GIT dotnet\Proiect\MyPhotoWCF\obj\Debug\MyPhotoWCF.pdb
+C:\Users\Andrei\Desktop\GIT dotnet\Proiect\MyPhotoWCF\bin\Debug\MyPhotoWCF.dll.config
+C:\Users\Andrei\Desktop\GIT dotnet\Proiect\MyPhotoWCF\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Andrei\Desktop\GIT dotnet\Proiect\MyPhotoWCF\bin\Debug\EntityFramework.SqlServer.xml

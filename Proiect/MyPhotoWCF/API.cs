@@ -19,7 +19,7 @@ namespace MyPhotoWCF
         {
             myphoto.CreateNew(table, name, id);
         }
-        public string Read(string table)
+        public IList<string> Read(string table)
         {
             return myphoto.Read(table);
         }

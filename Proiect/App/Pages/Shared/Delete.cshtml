@@ -1,0 +1,64 @@
+﻿@page
+@model App.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Medias</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Medias.ZoneId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medias.ZoneId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Medias.PeopleGroupsId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medias.PeopleGroupsId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Medias.EventsId)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medias.EventsId)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Medias.NamePhoto)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medias.NamePhoto)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Medias.Date)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medias.Date)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Medias.Path)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medias.Path)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Medias.isDeleted)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Medias.isDeleted)
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Medias.Id" />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-page="./Index">Back to List</a>
+    </form>
+</div>
